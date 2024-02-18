@@ -1,15 +1,15 @@
 {
-    "name": "My YT Bookmarks",
+    "name": "Linkedin Assistent",
     "version": "0.1.0",
-    "description": "Saving timestamps in YT videos",
+    "description": "Saving applied company name and job url to a file",
     "permissions": ["storage", "tabs"],
-    "host_permissions": ["https://*.youtube.com/*"],
+    "host_permissions": ["https://*.linkedin.com/*"],
     "background": {
       "service_worker": "background.js"
     },
     "content_scripts": [
       {
-        "matches": ["https://*.youtube.com/*"],
+        "matches": ["https://*.linkedin.com/*"],
         "js": ["contentScript.js"]
       }
     ],
@@ -21,16 +21,16 @@
           "assets/delete.png",
           "assets/save.png"
         ],
-        "matches": ["https://*.youtube.com/*"]
+        "matches": ["https://*.linkedin.com/*"]
       }
     ],
     "action": {
       "default_icon": {
-        "16": "assets/ext-icon.png",
-        "24": "assets/ext-icon.png",
-        "32": "assets/ext-icon.png"
+        "16": "assets/logo.png",
+        "24": "assets/logo.png",
+        "32": "assets/logo.png"
       },
-      "default_title": "My YT Bookmarks",
+      "default_title": "Linkedin Assistent",
       "default_popup": "popup.html"
     },
     "manifest_version": 3
